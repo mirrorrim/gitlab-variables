@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "glvars"
+version = "0.1.1"
+description = "CLI utility for managing variables in Gitlab"
+authors = ["Alexey Tylindus <a.tylindus@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-gitlab = "^3.9.0"
+pydantic = "^1.10.2"
+PyYAML = "^6.0"
+typer = {extras = ["all"], version = "^0.6.1"}
+
+[tool.poetry.dev-dependencies]
+black = "^22.8.0"
+icecream = "^2.1.3"
+isort = "^5.10.1"
+termcolor = "^1.1.0"
+wemake-python-styleguide = "^0.16.1"
+
+[tool.poetry.scripts]
+glvars = "glvars.main:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
