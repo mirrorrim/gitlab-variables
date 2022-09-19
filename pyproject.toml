@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "glvars"
-version = "0.1.1"
+version = "0.1.2"
 description = "CLI utility for managing variables in Gitlab"
 authors = ["Alexey Tylindus <a.tylindus@gmail.com>"]
 license = "MIT"

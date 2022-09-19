@@ -15,7 +15,10 @@ class VariableSynchronizer:
     @property
     def client(self) -> Gitlab:
         if self._client is None:
-            self._client = Gitlab(private_token=self.config.gitlab_private_token)
+            self._client = Gitlab(
+                url=self.config.gitlab_url,
+                private_token=self.config.gitlab_private_token,
+            )
         return self._client
 
     @property
