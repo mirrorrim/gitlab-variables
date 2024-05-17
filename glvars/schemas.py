@@ -21,7 +21,7 @@ class Variable(BaseModel):
     environment_scope: Optional[str] = None
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class GlVarsConfig(BaseModel):
@@ -31,7 +31,7 @@ class GlVarsConfig(BaseModel):
     variables: Union[list[Variable], dict[str, str]]
 
     class Config:
-        allow_population_by_field_name = True
+        populate_by_name = True
 
     def get_variables(self) -> list[Variable]:
         if isinstance(self.variables, list):

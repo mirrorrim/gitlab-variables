@@ -1,16 +1,16 @@
 [tool.poetry]
 name = "glvars"
-version = "0.1.4"
+version = "0.1.5"
 description = "CLI utility for managing variables in Gitlab"
 authors = ["Alexey Tylindus <a.tylindus@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-python-gitlab = "^3.9"
-pydantic = "^1"
+pydantic = "^2"
 PyYAML = "^6.0"
 typer = {version = ">=0.6.1", extras = ["all"]}
+python-gitlab = "^4.5.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.8.0"
